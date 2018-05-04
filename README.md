@@ -6,4 +6,5 @@ TODO:
 
 - [ ] Animation for menu icon
 - [ ] Infinite scrolling
+- [ ] Multibrowser support
 - [ ] Convert CSS to SASS
