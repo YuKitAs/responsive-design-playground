@@ -15,6 +15,10 @@ body {
   position: relative;
 }
 
+.dropdown-content {
+  display: none;
+}
+
 .main-title {
   position: absolute;
   bottom: 10%;
