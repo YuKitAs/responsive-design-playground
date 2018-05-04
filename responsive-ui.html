@@ -9,12 +9,18 @@
   </head>
   <body>
     <div class="toolbar">
-      <div class="menu-icon">
-        <div class="icon"></div>
-        <div class="icon"></div>
-        <div class="icon"></div>
+      <div class="dropdown">
+        <div class="menu-icon" onclick="openDropdownMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div id="dropdownMenu" class="dropdown-content">
+          <div class="menu-item" onclick="addCard()">New</div>
+        </div>
       </div>
     </div>
+
     <div class="container">
       <div class="header">
         <img src="http://herz-fuer-tiere.de/sites/herz-fuer-tiere.de/files/ehft_01314_0.jpg"></img>
@@ -71,6 +77,25 @@
       function addCard() {
         let newCard = document.getElementsByClassName('card')[0].cloneNode(true);
         document.getElementsByClassName('main-content')[0].insertBefore(newCard, document.getElementsByClassName('empty')[0]);
+
+        this._closeDropdownMenu();
+      }
+
+      function openDropdownMenu() {
+        document.getElementById('dropdownMenu').style.display = 'block';
+      }
+
+      window.onclick = function(e) {
+        if (!e.target.matches('.menu-icon') && !e.target.matches('.bar')) {
+          this._closeDropdownMenu();
+        }
+      }
+
+      function _closeDropdownMenu() {
+        let dropdown = document.getElementById('dropdownMenu');
+          if (dropdown.style.display !== 'none') {
+            dropdown.style.display = 'none';
+          }
       }
     </script>
   </body>
