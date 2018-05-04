@@ -4,6 +4,7 @@ My playground to learn responsive UI design with pure Javascript. Example images
 
 TODO:
 
+- [ ] Sticky toolbar
 - [ ] Animation for menu icon
 - [ ] Infinite scrolling
 - [ ] Multibrowser support
