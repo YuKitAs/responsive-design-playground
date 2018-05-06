@@ -19,6 +19,10 @@ body {
   display: none;
 }
 
+.menu-item {
+  display: none;
+}
+
 .main-title {
   position: absolute;
   bottom: 10%;
@@ -139,6 +143,24 @@ img {
     height: .2rem;
     margin: .2rem 0;
     background-color: white;
+    border-radius: 1px;
+  }
+
+  .menu-icon div:nth-child(1), div:nth-child(2), div:nth-child(3) {
+    transition: all 0.35s ease-in-out;
+  }
+
+  .menu-icon.open div:nth-child(1) {
+    transform: translateY(.4rem) rotate(45deg);
+  }
+
+  .menu-icon.open div:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+
+  .menu-icon.open div:nth-child(3) {
+    transform: translateY(-.4rem) rotate(-45deg);
   }
 
   .dropdown {
@@ -161,6 +183,7 @@ img {
   }
 
   .menu-item {
+    display: block;
     padding-left: .5rem;
     color: white;
     font-size: 1em;

@@ -10,7 +10,7 @@
   <body>
     <div class="toolbar">
       <div class="dropdown">
-        <div class="menu-icon" onclick="openDropdownMenu()">
+        <div class="menu-icon" onclick="toggleDropdownMenu()">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -74,6 +74,9 @@
     </div>
 
     <script>
+      var menuIcon = document.getElementsByClassName('menu-icon')[0];
+      var dropdown = document.getElementById('dropdownMenu');
+
       function addCard() {
         let newCard = document.getElementsByClassName('card')[0].cloneNode(true);
         document.getElementsByClassName('main-content')[0].insertBefore(newCard, document.getElementsByClassName('empty')[0]);
@@ -81,8 +84,12 @@
         this._closeDropdownMenu();
       }
 
-      function openDropdownMenu() {
-        document.getElementById('dropdownMenu').style.display = 'block';
+      function toggleDropdownMenu() {
+        if (dropdown.style.display !== 'block') {
+          this._openDropdownMenu();
+        } else {
+          this._closeDropdownMenu();
+        }
       }
 
       window.onclick = function(e) {
@@ -91,11 +98,14 @@
         }
       }
 
+      function _openDropdownMenu() {
+        menuIcon.classList.toggle('open');
+        dropdown.style.display = 'block';
+      }
+
       function _closeDropdownMenu() {
-        let dropdown = document.getElementById('dropdownMenu');
-          if (dropdown.style.display !== 'none') {
-            dropdown.style.display = 'none';
-          }
+        menuIcon.classList.remove('open');
+        dropdown.style.display = 'none';
       }
     </script>
   </body>
