@@ -6,7 +6,7 @@ TODO:
 
 - [x] Sticky toolbar
 
-- [ ] Animation for menu icon
+- [x] Animation for menu icon
 
 - [ ] Infinite scrolling
 
