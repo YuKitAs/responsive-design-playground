@@ -80,8 +80,6 @@
       function addCard() {
         let newCard = document.getElementsByClassName('card')[0].cloneNode(true);
         document.getElementsByClassName('main-content')[0].insertBefore(newCard, document.getElementsByClassName('empty')[0]);
-
-        this._closeDropdownMenu();
       }
 
       function toggleDropdownMenu() {
