@@ -10,6 +10,4 @@ TODO:
 
 - [ ] Infinite scrolling
 
-- [ ] Multibrowser support
-
 - [ ] Convert CSS to SASS
