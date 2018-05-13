@@ -6,8 +6,8 @@ body {
 
 .container {
   position: relative;
-  width: 50vw;
-  max-width: 50vw;
+  width: 50%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -40,10 +40,11 @@ img {
 
 #addButton {
   position: fixed;
-  right: 5rem;
-  bottom: 3rem;
-  width: 1.5em;
-  height: 1.5em;
+  right: 10%;
+  bottom: 5%;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
   border: 1px solid #555;
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -73,7 +74,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: calc(33.3% - 2em);
+  max-width: calc(33.3% - 1.5em);
   margin: 1rem 0;
   background-color: white;
 }
@@ -110,20 +111,26 @@ img {
 }
 
 .empty {
-  width: calc(33.3% - 2em);
+  width: calc(33.3% - 1.5em);
   height: 1px;
   margin: 1rem 0;
 }
 
-@media screen and (max-width: 68.75rem) {
+/* Tablets */
+@media only screen and (max-width: 1224px) {
+  .container {
+    width: 65%;
+  }
+
   .card, .empty {
     flex: 50%;
-    max-width: calc(50% - 2em);
+    max-width: calc(50% - 1em);
   }
 }
 
-@media screen and (max-width: 50rem) {
-  .header, #addButton {
+/* Mobile phones */
+@media only screen and (max-width: 768px) {
+  .header {
     display: none;
   }
 
@@ -177,19 +184,15 @@ img {
     right: 0;
     top: 2rem;
     display: none;
-    min-width: 6em;
-    height: 2em;
+    width: 6em;
+    min-height: 2em;
     background-color: #666;
     z-index: 1;
   }
 
-  .dropdown-content:hover {
-    background-color: #888;
-  }
-
   .menu-item {
     display: block;
-    padding-left: .5rem;
+    padding-left: .8rem;
     color: white;
     font-size: 1em;
     font-family: Arial;
@@ -199,8 +202,23 @@ img {
     cursor: pointer;
   }
 
+  .menu-item:hover {
+    background-color: #888;
+  }
+
   .card, .empty {
     flex: 100%;
     max-width: 100%;
+  }
+}
+
+/* Small mobile phones */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .abstract, .more {
+    font-size: 12px;
   }
 }
