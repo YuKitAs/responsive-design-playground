@@ -39,13 +39,18 @@ img {
 }
 
 #addButton {
-  padding: 0.5rem 1rem;
-  border: 2px solid #555;
+  position: fixed;
+  right: 5rem;
+  bottom: 3rem;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid #555;
+  border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-top: 1rem;
   background-color: #555;
   color: white;
-  font-size: 1em;
+  font-size: 2em;
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
 }
@@ -55,7 +60,7 @@ img {
 }
 
 #addButton:focus {
-  outline:0;
+  outline: 0;
 }
 
 .main-content {
@@ -112,8 +117,8 @@ img {
 
 @media screen and (max-width: 68.75rem) {
   .card, .empty {
-      flex: 50%;
-      max-width: calc(50% - 2em);
+    flex: 50%;
+    max-width: calc(50% - 2em);
   }
 }
 
@@ -195,7 +200,7 @@ img {
   }
 
   .card, .empty {
-      flex: 100%;
-      max-width: 100%;
+    flex: 100%;
+    max-width: 100%;
   }
 }
